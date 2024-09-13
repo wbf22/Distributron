@@ -4,14 +4,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-include_directories(../server)
-include_directories(../client_server_interface)
-include_directories(../ManyWorlds/network)
+include_directories(./distributron)
 
-file(GLOB_RECURSE SERVER_SOURCES "../server/*.cpp" "../server/*.hpp" "../server/*.c")
-file(GLOB_RECURSE INTERFACE_SOURCES "../client_server_interface/*.hpp")
-file(GLOB_RECURSE CLIENT_SOURCES "../ManyWorlds/network/*.hpp")
+file(GLOB_RECURSE SOURCE "./distributron/*.cpp" "./distributron/*.hpp" "./distributron/*.c")
 
 
-add_executable(many_worlds_test test.cpp ${SERVER_SOURCES} ${INTERFACE_SOURCES} ${CLIENT_SOURCES})
+add_executable(distributron ./distributron/distributron.cpp ${SOURCE})
 

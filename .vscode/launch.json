@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "run debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask" : "build",
+            "program": "${workspaceFolder}/build/distributron",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "clean run debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask" : "clean build",
+            "program": "${workspaceFolder}/build/distributron",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        }
+    ]
+}

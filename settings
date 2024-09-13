@@ -1,0 +1,17 @@
+
+
+
+PORT=8080
+NUM_THREADS=10
+RATE_LIMIT=200ms # The minimum time between requests
+THROTTLE_RATE=10 # Each request faster than the delay will be throttled by PREVIOUS_RATE_LIMIT * RATE
+MAX_REQUEST_SIZE_BYTES=65536
+
+
+# Database Settings
+PARTNER_DATABASE_URLS=jdbc:postgresql://partner1.example.com/, jdbc:postgresql://partner2.example.com/
+ENCRYPTION_ALGORITHM=AES-256 # AES-128, NONE
+ENCRYPTION_KEY=1WM487$90123W5N78I012S456F890H9 # 32 bytes for AES-256
+
+# api calls the server will make on behalf of the client
+URLS=https://www.example.com/, https://www.youtube.com/
